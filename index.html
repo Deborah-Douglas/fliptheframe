@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flip the Frame: Photo Selects | Journalism Education, Reimagined</title>
+<meta name="description" content="Candidate photos of Flip the Frame tours for Deborah D. Douglas's chapter in Journalism Education, Reimagined.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== Deborah D. Douglas brand palette (edit here to change site-wide) ===== */
+  :root{
+    --rust:#AF380D; --peach:#FF9D7A; --gold:#EBAD34; --cream:#FAF3E9;
+    --violet:#5C4BB5; --lavender:#C7BDFC; --mint:#DCFABC;
+    --charcoal:#4B4A46; --ink:#141312; --white:#FFFFFF;
+    --display:'Anton', 'Impact', 'Arial Narrow', sans-serif;
+    --sans:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;position:relative}
+  .eyebrow{font-family:var(--sans);font-size:.82rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+  h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.98;letter-spacing:.005em}
+
+  /* Notched tab, echoing the brand graphics */
+  .tab{position:absolute;width:56px;clip-path:polygon(0 0,100% 0,100% 100%,50% calc(100% - 26px),0 100%)}
+
+  /* ===== Hero ===== */
+  header.hero{background:var(--rust);color:var(--white);position:relative;overflow:hidden}
+  header.hero::before{content:"";position:absolute;left:0;top:0;width:52%;height:62%;background:var(--peach);clip-path:polygon(0 0,100% 0,98% 100%,0 92%)}
+  header.hero::after{content:"";position:absolute;left:0;bottom:0;width:7%;height:16%;background:var(--mint);clip-path:polygon(0 8%,100% 0,100% 100%,0 100%)}
+  .hero .wrap{padding-top:80px;padding-bottom:96px;z-index:1}
+  .hero h1{font-size:clamp(3.2rem,9vw,7.6rem);margin:22px 0 28px;max-width:11ch}
+  .hero .sub{font-size:1.12rem;max-width:44ch;color:rgba(255,255,255,.92)}
+  .hero .sub b{font-weight:600}
+
+  /* ===== Intro ===== */
+  .intro{padding:72px 0 32px;display:grid;grid-template-columns:1.55fr 1fr;gap:64px;align-items:start}
+  .intro p.lede{font-size:1.28rem;line-height:1.65}
+  .intro .eyebrow{color:var(--rust);margin-bottom:18px;display:block}
+  .people{list-style:none;border-top:4px solid var(--ink)}
+  .people li{border-bottom:1px solid rgba(20,19,18,.18)}
+  .people a{text-decoration:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0}
+  .people strong{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.45rem;line-height:1}
+  .people small{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal)}
+  .people .dot{width:14px;height:14px;display:inline-block;margin-right:12px;vertical-align:middle}
+  .people a:hover strong{color:var(--rust)}
+
+  /* ===== How to download ===== */
+  .howto{background:var(--violet);color:var(--white);padding:56px 56px 56px 120px;margin:48px 0 16px;display:grid;grid-template-columns:1fr 1.5fr;gap:48px;position:relative;overflow:hidden}
+  .howto .tab{left:36px;top:0;height:200px;background:var(--charcoal)}
+  .howto::after{content:"";position:absolute;right:0;bottom:0;width:22%;height:18%;background:var(--peach);clip-path:polygon(0 30%,100% 0,100% 100%,0 100%)}
+  .howto h2{font-size:clamp(2.2rem,4vw,3.4rem);margin-top:14px}
+  .howto h2 + p{margin-top:16px;color:rgba(255,255,255,.85);font-size:.98rem}
+  .steps{list-style:none;counter-reset:s;display:grid;gap:20px;position:relative;z-index:1}
+  .steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:16px;font-size:1rem}
+  .steps li::before{content:counter(s);width:44px;height:44px;background:var(--gold);color:var(--ink);font-family:var(--display);font-size:1.4rem;display:grid;place-items:center}
+  .steps b{color:var(--lavender);font-weight:600}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:13px 20px;transition:transform .15s ease,background .15s ease,color .15s ease;cursor:pointer;border:0}
+  .btn svg{width:16px;height:16px}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover{background:var(--white);transform:translateY(-2px)}
+  .btn-dark{background:var(--ink);color:var(--white)}
+  .btn-dark:hover{background:var(--rust);transform:translateY(-2px)}
+  .howto .all{margin-top:28px;position:relative;z-index:1}
+
+  /* ===== Sections ===== */
+  section.group{padding:72px 0 8px}
+  .group-head{position:relative;color:var(--white);padding:30px 36px 30px 112px;margin-bottom:32px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;overflow:hidden}
+  .group-head .tab{left:30px;top:0;height:100%;max-height:150px}
+  .group-head .num{font-family:var(--display);font-size:1.1rem;letter-spacing:.06em;opacity:.85}
+  .group-head h2{font-size:clamp(2.2rem,5vw,4rem);margin-top:6px}
+  .group-head p{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;text-align:right;max-width:30ch}
+  #dilla .group-head{background:var(--violet)}  #dilla .tab{background:var(--charcoal)}
+  #tonika .group-head{background:var(--gold);color:var(--ink)} #tonika .tab{background:var(--cream)}
+  #corey .group-head{background:var(--rust)}  #corey .tab{background:var(--peach)}
+  #tour .group-head{background:var(--charcoal)} #tour .tab{background:var(--mint)}
+
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:28px}
+  .card{grid-column:span 4;background:var(--white);display:flex;flex-direction:column;box-shadow:0 18px 40px -28px rgba(20,19,18,.55)}
+  .card.wide{grid-column:span 8}
+  .card.half{grid-column:span 6}
+
+  .card.feature{grid-column:span 12;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+  .card.feature .frame{aspect-ratio:9/14}
+  .card.feature.landscape{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+  .card.feature.landscape .frame{aspect-ratio:16/10}
+  .card.feature .body{padding:40px 44px;justify-content:flex-end}
+  .card.feature .body h3{font-size:clamp(2rem,3.6vw,3.2rem)}
+  .card.feature .body p{font-size:1.05rem;max-width:42ch}
+  @media (max-width:900px){.card.feature,.card.feature.landscape{grid-column:span 12;grid-template-columns:1fr}.card.feature .body{padding:24px}}
+  .frame{position:relative;background:var(--lavender);cursor:zoom-in;overflow:hidden}
+  .frame img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .frame:hover img{transform:scale(1.03)}
+  .portrait .frame{aspect-ratio:3/4}
+  .tall .frame{aspect-ratio:9/14}
+  .card.wide .frame{aspect-ratio:16/10}
+  .tag{position:absolute;top:0;left:0;background:var(--ink);color:var(--white);font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:8px 12px}
+  .body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .body h3{font-size:1.7rem}
+  .body p{font-size:.94rem;color:var(--charcoal)}
+  .meta{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal)}
+  .actions{margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid rgba(20,19,18,.12)}
+
+  /* ===== Footer ===== */
+  footer{margin-top:96px;background:var(--ink);color:rgba(255,255,255,.75);padding:48px 0;font-size:.9rem;position:relative;overflow:hidden}
+  footer::before{content:"";position:absolute;left:0;top:0;width:100%;height:10px;background:linear-gradient(90deg,var(--rust) 0 25%,var(--peach) 25% 40%,var(--gold) 40% 62%,var(--violet) 62% 82%,var(--lavender) 82% 92%,var(--mint) 92%)}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+  footer strong{color:var(--white);font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.8rem;letter-spacing:.01em;display:block;line-height:1}
+
+  /* ===== Lightbox ===== */
+  .lb{position:fixed;inset:0;background:rgba(20,19,18,.95);display:none;align-items:center;justify-content:center;flex-direction:column;gap:18px;padding:24px;z-index:50}
+  .lb.open{display:flex}
+  .lb img{max-height:78vh;max-width:92vw;width:auto}
+  .lb .cap{color:var(--white);font-family:var(--display);text-transform:uppercase;font-size:1.6rem;text-align:center}
+  .lb .bar{display:flex;gap:12px;align-items:center}
+  .lb .close{position:absolute;top:18px;right:24px;background:none;border:0;color:var(--white);font-size:2.2rem;cursor:pointer;line-height:1}
+  .lb .nav{position:absolute;top:50%;transform:translateY(-50%);background:var(--violet);border:0;color:var(--white);width:52px;height:52px;font-size:1.4rem;cursor:pointer}
+  .lb .prev{left:18px}.lb .next{right:18px}
+  .lb .nav:hover{background:var(--gold);color:var(--ink)}
+
+  @media (max-width:900px){
+    .intro,.howto{grid-template-columns:1fr;gap:32px}
+    .howto{padding:48px 32px 56px 96px}
+    .card,.card.wide,.card.half{grid-column:span 6}
+    .group-head{flex-direction:column;align-items:flex-start}
+    .group-head p{text-align:left}
+  }
+  @media (max-width:620px){
+    header.hero::before{height:34%;width:62%}
+    .wrap{padding:0 20px}
+    .howto{padding:40px 22px 56px 80px}
+    .howto .tab{left:20px;width:40px}
+    .group-head{padding:24px 22px 24px 84px}
+    .group-head .tab{left:20px;width:40px}
+    .card,.card.wide,.card.half{grid-column:span 12}
+    .lb .nav{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Journalism Education, Reimagined &nbsp;·&nbsp; Photo selects</div>
+    <h1>Flip the Frame</h1>
+    <p class="sub">Candidate images for <b>Deborah D. Douglas's</b> chapter: storytellers in Chicago modeling asset-framing in the field.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="intro">
+    <div><span class="eyebrow">About these photos</span><p class="lede">These photos depict Flip the Frame tours that model the asset-framing technique for storytellers. Featured are urban historian Shermann “Dilla” Thomas, Folded Map creator Tonika Johnson and Corey Luckett, owner of Englewood Branded, a clothing line and youth resource center in Chicago's Englewood neighborhood that dedicates 10% of sales to local youth engagement and community spaces. They are mentioned in my chapter.</p></div>
+    <ul class="people" aria-label="Jump to a section">
+      <li><a href="#dilla"><span><span class="dot" style="background:var(--violet)"></span><strong>Shermann “Dilla” Thomas</strong></span><small>1 photo</small></a></li>
+      <li><a href="#tonika"><span><span class="dot" style="background:var(--gold)"></span><strong>Tonika Johnson</strong></span><small>2 photos</small></a></li>
+      <li><a href="#corey"><span><span class="dot" style="background:var(--rust)"></span><strong>Corey Luckett</strong></span><small>3 photos</small></a></li>
+      <li><a href="#tour"><span><span class="dot" style="background:var(--charcoal)"></span><strong>On the tour</strong></span><small>1 photo</small></a></li>
+    </ul>
+  </div>
+
+  <aside class="howto" aria-labelledby="howto-title">
+    <span class="tab" aria-hidden="true"></span>
+    <div>
+      <div class="eyebrow">For editors &amp; designers</div>
+      <h2 id="howto-title">How to download these photos</h2>
+      <p>Every file is the original, full-resolution image, not the smaller preview shown on this page.</p>
+    </div>
+    <div>
+      <ol class="steps">
+        <li><span><b>One photo:</b> click the <b>Download</b> button under any image. The full-resolution JPG saves to your Downloads folder.</span></li>
+        <li><span><b>Preview first:</b> click any image to open it larger. Use the arrows (or your keyboard's ← →) to browse, then hit <b>Download</b>.</span></li>
+        <li><span><b>Everything at once:</b> use <b>Download all</b> below to get a single .zip with all seven originals.</span></li>
+        <li><span><b>On a phone or tablet:</b> tap <b>Download</b>, or press and hold the image and choose <b>Save to Photos</b> / <b>Download image</b>.</span></li>
+      </ol>
+      <a class="btn btn-gold all" href="flip-the-frame-photos.zip" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+        Download all (.zip, 6.5 MB)
+      </a>
+    </div>
+  </aside>
+
+  <!-- Shermann "Dilla" Thomas -->
+  <section class="group" id="dilla">
+    <div class="group-head">
+      <span class="tab" aria-hidden="true"></span>
+      <div><div class="num">01</div><h2>Shermann “Dilla” Thomas</h2></div>
+      <p>Urban historian</p>
+    </div>
+    <div class="grid">
+      <article class="card feature" data-file="shermann-dilla-thomas">
+        <div class="frame"><span class="tag">Vertical</span><img loading="lazy" src="images/web/shermann-dilla-thomas.jpg" alt="Shermann “Dilla” Thomas speaks to a tour group in front of a green historical marker surrounded by trees."></div>
+        <div class="body">
+          <h3>Dilla Thomas at a historical marker</h3>
+          <p>Thomas leads the group beside a Douglas community historical marker, framed by greenery, with listeners in the foreground. The vertical format suits a full-height page or sidebar.</p>
+          <div class="actions"><span class="meta">1080 × 1920 · JPG</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Tonika Johnson -->
+  <section class="group" id="tonika">
+    <div class="group-head">
+      <span class="tab" aria-hidden="true"></span>
+      <div><div class="num">02</div><h2>Tonika Johnson</h2></div>
+      <p>Creator of the Folded Map Project</p>
+    </div>
+    <div class="grid">
+      <article class="card tall half" data-file="tonika-johnson">
+        <div class="frame"><span class="tag">Vertical</span><img loading="lazy" src="images/web/tonika-johnson.jpg" alt="Tonika Johnson, smiling, speaks into a microphone at the front of a tour bus."></div>
+        <div class="body">
+          <h3>Tonika Johnson guiding from the bus</h3>
+          <p>Johnson addresses riders by microphone at the front of the tour bus.</p>
+          <div class="actions"><span class="meta">1080 × 1920 · JPG</span></div>
+        </div>
+      </article>
+      <article class="card tall half" data-file="tonika-johnson-folded-map-bus">
+        <div class="frame"><span class="tag">Vertical</span><img loading="lazy" src="images/web/tonika-johnson-folded-map-bus.jpg" alt="Tonika Johnson, seated on a tour bus holding papers, talks with a rider leaning over the seat. A red CRR19 commemoration shirt hangs behind them and a Folding the Map handout is in the foreground."></div>
+        <div class="body">
+          <h3>Conversation on the bus</h3>
+          <p>Johnson talks with a rider, with a “Folding the Map” handout in the foreground and a Chicago Race Riot of 1919 Commemoration Project shirt behind her.</p>
+          <div class="actions"><span class="meta">1932 × 2576 · JPG</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Corey Luckett -->
+  <section class="group" id="corey">
+    <div class="group-head">
+      <span class="tab" aria-hidden="true"></span>
+      <div><div class="num">03</div><h2>Corey Luckett</h2></div>
+      <p>Owner, Englewood Branded</p>
+    </div>
+    <div class="grid">
+      <article class="card portrait" data-file="corey-luckett-3">
+        <div class="frame"><span class="tag">Wide scene</span><img loading="lazy" src="images/web/corey-luckett-3.jpg" alt="Corey Luckett speaks to a circle of visitors on a freshly painted blue and yellow court, with colorfully painted shipping containers behind them."></div>
+        <div class="body">
+          <h3>Luckett on the court</h3>
+          <p>Luckett addresses the full group on a blue-and-yellow court, with painted shipping-container structures in the background.</p>
+          <div class="actions"><span class="meta">1932 × 2576 · JPG</span></div>
+        </div>
+      </article>
+      <article class="card portrait" data-file="corey-luckett-2">
+        <div class="frame"><span class="tag">Portrait</span><img loading="lazy" src="images/web/corey-luckett-2.jpg" alt="Close portrait of Corey Luckett mid-sentence, hand at his temple, with tour participants behind him."></div>
+        <div class="body">
+          <h3>Luckett, close-up</h3>
+          <p>A tight portrait of Luckett mid-thought, with tour participants listening behind him.</p>
+          <div class="actions"><span class="meta">1932 × 2576 · JPG</span></div>
+        </div>
+      </article>
+      <article class="card portrait" data-file="corey-luckett-1">
+        <div class="frame"><span class="tag">Profile</span><img loading="lazy" src="images/web/corey-luckett-1.jpg" alt="Corey Luckett in profile, gesturing as he speaks, while a visitor records him on a phone."></div>
+        <div class="body">
+          <h3>Luckett in profile</h3>
+          <p>Luckett gestures as he talks while a visitor records on her phone.</p>
+          <div class="actions"><span class="meta">1932 × 2576 · JPG</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Group -->
+  <section class="group" id="tour">
+    <div class="group-head">
+      <span class="tab" aria-hidden="true"></span>
+      <div><div class="num">04</div><h2>On the tour</h2></div>
+      <p>Flip the Frame, 2023</p>
+    </div>
+    <div class="grid">
+      <article class="card feature landscape" data-file="flip-the-frame-2023">
+        <div class="frame"><span class="tag">Horizontal</span><img loading="lazy" src="images/web/flip-the-frame-2023.jpg" alt="A large group of students stands on a tree-lined sidewalk listening intently, with the tour bus at right."></div>
+        <div class="body">
+          <h3>Students listening on the sidewalk</h3>
+          <p>Participants gather on a tree-lined street beside the tour bus, listening to a guide off-frame.</p>
+          <div class="actions"><span class="meta">1920 × 1080 · JPG</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Flip the Frame</strong>Photo selects for <em>Journalism Education, Reimagined</em></div>
+    <div>Please credit the photographer and confirm permissions before publication.</div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="close" aria-label="Close">&times;</button>
+  <button class="nav prev" aria-label="Previous photo">&#8592;</button>
+  <img alt="">
+  <div class="cap"></div>
+  <div class="bar"></div>
+  <button class="nav next" aria-label="Next photo">&#8594;</button>
+</div>
+
+<script>
+(function(){
+  var dl = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>';
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+
+  // Add Download + View buttons to each card
+  cards.forEach(function(card, i){
+    var f = card.getAttribute('data-file');
+    var actions = card.querySelector('.actions');
+    var a = document.createElement('a');
+    a.className = 'btn btn-dark';
+    a.href = 'images/full/' + f + '.jpg';
+    a.setAttribute('download', f + '.jpg');
+    a.innerHTML = dl + 'Download';
+    actions.appendChild(a);
+    card.querySelector('.frame').addEventListener('click', function(){ open(i); });
+  });
+
+  var lb = document.getElementById('lb'), img = lb.querySelector('img'),
+      cap = lb.querySelector('.cap'), bar = lb.querySelector('.bar'), cur = 0;
+
+  function open(i){
+    cur = (i + cards.length) % cards.length;
+    var c = cards[cur], f = c.getAttribute('data-file');
+    img.src = 'images/web/' + f + '.jpg';
+    img.alt = c.querySelector('img').alt;
+    cap.textContent = c.querySelector('h3').textContent;
+    bar.innerHTML = '<a class="btn btn-gold" href="images/full/' + f + '.jpg" download="' + f + '.jpg">' + dl + 'Download full resolution</a>';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+  lb.querySelector('.close').addEventListener('click', close);
+  lb.querySelector('.prev').addEventListener('click', function(){ open(cur - 1); });
+  lb.querySelector('.next').addEventListener('click', function(){ open(cur + 1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') open(cur - 1);
+    if (e.key === 'ArrowRight') open(cur + 1);
+  });
+})();
+</script>
+</body>
+</html>
